@@ -7,7 +7,7 @@ Production deployment: see [`../deploy/DEPLOYMENT.md`](../deploy/DEPLOYMENT.md).
 ## Features
 
 - Sign in with the admin account created by `npm run migrate` in `../Backend`.
-- **Articles**: create/edit with a rich-text editor (Jodit), featured image upload (Cloudinary), tags, featured flag, meta title/description; approve/reject queue (`/articles/pending`) and "My articles".
+- **Articles**: create/edit with a rich-text editor (Jodit), featured image upload (DigitalOcean Spaces), tags, featured flag, meta title/description; approve/reject queue (`/articles/pending`) and "My articles".
 - **Categories**, **comments** moderation, **newsletter** subscribers.
 - **Users & roles** with permission-based access, **activity logs**, dashboard analytics.
 - "View on blog" links open `https://blog.readyio.com/<slug>`.
