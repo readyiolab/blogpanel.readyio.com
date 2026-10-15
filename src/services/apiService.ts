@@ -3,7 +3,7 @@ import type { Article, Category, CommentRecord, ActivityLog, RoleRecord, Paginat
 import axiosRetry from 'axios-retry';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:4000/api';
-const BLOG_SITE_URL = (import.meta.env.VITE_BLOG_SITE_URL ?? 'https://blog.readyio.com').replace(/\/$/, '');
+const BLOG_SITE_URL = (import.meta.env.VITE_BLOG_SITE_URL ?? 'https://blog.zuvigo.com').replace(/\/$/, '');
 export const getApiBaseUrl = () => API_BASE_URL;
 export const getBlogSiteUrl = () => BLOG_SITE_URL;
 export const getArticleLiveUrl = (slug: string) => `${BLOG_SITE_URL}/${slug}`;

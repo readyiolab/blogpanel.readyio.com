@@ -146,10 +146,10 @@ const AppSidebar = () => {
             <SidebarHeader className="border-b px-4 py-4">
                 <div className="flex shrink-0 items-center gap-2 px-2">
                     <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                        <span className="font-bold">R</span>
+                        <span className="font-bold">Z</span>
                     </div>
                     <div className="grid flex-1 text-left text-sm leading-tight group-data-[collapsible=icon]:hidden">
-                        <span className="truncate font-semibold">Readyio CMS</span>
+                        <span className="truncate font-semibold">Zuvigo CMS</span>
                         <span className="truncate text-xs opacity-70">{user?.role ?? 'Panel'}</span>
                     </div>
                 </div>

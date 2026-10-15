@@ -1,6 +1,6 @@
-# Readyio blog admin panel (`blogpanel.readyio.com`)
+# Zuvigo blog admin panel (`blogpanel.zuvigo.com`)
 
-React + Vite + TypeScript single-page app for writing and managing blog content. It talks only to the Readyio API (`https://api.readyio.com/api`). In production it is a static build served by Nginx; there is no Node process.
+React + Vite + TypeScript single-page app for writing and managing blog content. It talks only to the Zuvigo API (`https://api.zuvigo.com/api`). In production it is a static build served by Nginx; there is no Node process.
 
 Production deployment: see [`../deploy/DEPLOYMENT.md`](../deploy/DEPLOYMENT.md).
 
@@ -10,9 +10,9 @@ Production deployment: see [`../deploy/DEPLOYMENT.md`](../deploy/DEPLOYMENT.md).
 - **Articles**: create/edit with a rich-text editor (Jodit), featured image upload (DigitalOcean Spaces), tags, featured flag, meta title/description; approve/reject queue (`/articles/pending`) and "My articles".
 - **Categories**, **comments** moderation, **newsletter** subscribers.
 - **Users & roles** with permission-based access, **activity logs**, dashboard analytics.
-- "View on blog" links open `https://blog.readyio.com/<slug>`.
+- "View on blog" links open `https://blog.zuvigo.com/<slug>`.
 
-Publishing or editing an article makes the API refresh `readyio.com/blog` and `blog.readyio.com` automatically.
+Publishing or editing an article makes the API refresh `zuvigo.com/blog` and `blog.zuvigo.com` automatically.
 
 ## Local development
 
@@ -34,12 +34,12 @@ npm run dev               # http://localhost:5173
 
 | Variable | Dev (`.env`) | Prod (`.env.production`) |
 | --- | --- | --- |
-| `VITE_API_BASE_URL` | `http://localhost:4000/api` | `https://api.readyio.com/api` |
-| `VITE_BLOG_SITE_URL` | `http://localhost:8081` | `https://blog.readyio.com` |
+| `VITE_API_BASE_URL` | `http://localhost:4000/api` | `https://api.zuvigo.com/api` |
+| `VITE_BLOG_SITE_URL` | `http://localhost:8081` | `https://blog.zuvigo.com` |
 
 Values are compiled into the bundle at build time. See [`.env.example`](.env.example).
 
 ## Hosting notes
 
-- Uses `BrowserRouter`, so the web server must fall back to `index.html` for unknown paths (`deploy/nginx/blogpanel.readyio.com.conf` does this).
+- Uses `BrowserRouter`, so the web server must fall back to `index.html` for unknown paths (`deploy/nginx/blogpanel.zuvigo.com.conf` does this).
 - The Nginx config sends `X-Robots-Tag: noindex, nofollow` so the panel never appears in search results.
